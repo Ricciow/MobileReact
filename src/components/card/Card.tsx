@@ -1,5 +1,6 @@
 import ChildrenCard from "./ChildrenCard"
 import ImageCard from "./ImageCard"
+import PostCard from "./PostCard"
 
 interface CardProps {
     image?: string
@@ -25,7 +26,7 @@ export default function Card(props: CardProps) {
 
     if(props.image) {
         if(props.title) {
-            //Post
+            <PostCard image={props.image} alt={props.alt || ''} title={props.title} data={props.data} category={props.category} duration={props.duration} to={props.to} ariaLabel={props.ariaLabel} id={props.id}/>;
         }
         return <ImageCard src={props.image} alt={props.alt || ''} to={props.to} ariaLabel={props.ariaLabel} overlay={props.overlay}/>;
     }
