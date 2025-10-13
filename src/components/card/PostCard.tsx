@@ -20,7 +20,7 @@ export default function PostCard(props: PostCardProps) {
                     <img src={props.image} alt={props.alt}/>
                 </div>
                 <div className="post_texts">
-                    <p>{props.data} &bullet; {props.category}</p>
+                    <p>{props.data} • {props.category}</p>
                     <h3 id={props.id}>{props.title}</h3>
                     {props.duration && <p>{props.duration}</p>}
                 </div>

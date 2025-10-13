@@ -52,29 +52,8 @@ export default function Index() {
                 <section aria-labelledby="destaques" className="top_posts">
                     <h2 id="destaques" className="subtitle">Postagens em Destaque</h2>
                     <nav aria-label="Postagens em destaque" className="top_posts_list">
-                        <a href="#" aria-labelledby="post_1">
-                            <article className="top_post card">
-                                <div className="post_image">
-                                    <img src={imagemDesign} alt="Postagem 1"/>
-                                </div>
-                                <div className="post_texts">
-                                    <p>31 Jul 2025 &bullet; Destaque</p>
-                                    <h3 id="post_1">Erros de Design que Todos Devem Evitar</h3>
-                                    <p>3 min</p>
-                                </div>
-                            </article>
-                        </a>
-                        <a href="#" aria-labelledby="post_2">
-                            <article className="top_post card">
-                                <div className="post_image">
-                                    <img src={imagemEmpresas} alt="Postagem 1"/>
-                                </div>
-                                <div className="post_texts">
-                                    <p>31 Jul 2025 &bullet; Destaque</p>
-                                    <h3 id="post_2">As maiores Empresas por Receita</h3>
-                                </div>
-                            </article>
-                        </a>
+                        <Card image={imagemDesign} alt="Postagem 1" title="Erros de Design que Todos Devem Evitar" data="31 Jul 2025" duration="3 min" category="Destaque" to="./post.html" id="post_1"/>
+                        <Card image={imagemEmpresas} alt="Postagem 1" title="As maiores Empresas por Receita" data="31 Jul 2025" category="Destaque" to="./post.html" id="post_2"/>
                     </nav>
                 </section>
 
