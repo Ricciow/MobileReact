@@ -3,15 +3,22 @@ import imagemClose from '../../assets/close.svg'
 import imagemSearch from '../../assets/search.svg'
 import imagemUser from '../../assets/user.png'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 export default function Header() {
+    const [menuOpen, setMenuOpen] = useState(false)
+
+    function handleClick() {
+        setMenuOpen(!menuOpen)
+    }
+
     return(
         <header>
             <h1 className="logo"><Link to="./index.html" aria-label="Ir para a home" className="logo_link">HABIT</Link></h1>
 
             <nav className="header_nav" aria-label="Menu principal">
                 <Link to="./newsletter.html" className="header_link">Assinar</Link>
-                <button className="menu_button" aria-label="Abrir Menu" aria-expanded="false" aria-controls="header_menu" id="menu_hamburguer">
+                <button className={`menu_button ${menuOpen ? 'ativo' : ''}`} aria-label="Abrir Menu" aria-expanded="false" aria-controls="header_menu" id="menu_hamburguer" onClick={handleClick}>
                     <img src={imagemMenu} alt="menu" className="menu_icon"/>
                     <img src={imagemClose} alt="fechar_menu" className="close_menu_icon"/>
                 </button>
