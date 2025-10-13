@@ -1,8 +1,11 @@
 import Card from "../components/card/Card";
 
+import imagemIntrodution from "../assets/introduction.png"
 import imagemTrabalho from "../assets/trabalho.png"
 import imagemLivros from "../assets/livros.png"
 import imagemTecnologia from "../assets/tecnologia.png"
+import imagemDesign from "../assets/design.png"
+import imagemEmpresas from "../assets/empresas.png"
 
 export default function Index() {
     return (
@@ -17,13 +20,12 @@ export default function Index() {
                         <a href="#categories" className="button_inverse">Explorar categorias</a>
                     </div>
                 </div>
-                <Card image="../assets/introduction.png" alt="Apresentação do site"/>
+                <Card image={imagemIntrodution} alt="Apresentação do site"/>
             </section>
 
             <section aria-labelledby="popular_categories_title" className="popular_categories">
                 <h2 id="popular_categories_title" className="subtitle">Categorias Populares</h2>
                 <nav aria-label="Categorias populares" className="popular_categories_list">
-                    {/* Ajustar no futuro com links */}
                     <Card image={imagemTrabalho} alt="Categoria de trabalho" to="./categories.html?category=Trabalho" ariaLabel="Trabalho" overlay="Trabalho"/>
                     <Card image={imagemLivros} alt="Categoria de livros" to="./categories.html?category=Livros" ariaLabel="Livros" overlay="Livros"/>
                     <Card image={imagemTecnologia} alt="Categoria de tecnologia" to="./categories.html?category=Tecnologia" ariaLabel="Tecnologia" overlay="Tecnologia"/>
@@ -53,7 +55,7 @@ export default function Index() {
                         <a href="#" aria-labelledby="post_1">
                             <article className="top_post card">
                                 <div className="post_image">
-                                    <img src="assets/design.png" alt="Postagem 1"/>
+                                    <img src={imagemDesign} alt="Postagem 1"/>
                                 </div>
                                 <div className="post_texts">
                                     <p>31 Jul 2025 &bullet; Destaque</p>
@@ -65,7 +67,7 @@ export default function Index() {
                         <a href="#" aria-labelledby="post_2">
                             <article className="top_post card">
                                 <div className="post_image">
-                                    <img src="assets/empresas.png" alt="Postagem 1"/>
+                                    <img src={imagemEmpresas} alt="Postagem 1"/>
                                 </div>
                                 <div className="post_texts">
                                     <p>31 Jul 2025 &bullet; Destaque</p>
