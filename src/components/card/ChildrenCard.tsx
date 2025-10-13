@@ -11,7 +11,7 @@ type ChildrenCardProps = {
 }
 
 export default function ChildrenCard(props: ChildrenCardProps) {
-    const className = props.admin ? 'card_admin' : 'card' + (props.className ? ' ' + props.className : '')
+    const className = (props.admin ? 'card_admin' : 'card') + (props.className ? ' ' + props.className : '')
 
     if(props.to) {
         return (
