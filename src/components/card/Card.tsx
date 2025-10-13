@@ -5,7 +5,9 @@ interface CardProps {
     image?: string
     alt?: string
     title?: string
-    description?: string
+    data?: string
+    category?: string
+    id?: string
     duration?: string
     to?: string
     ariaLabel?: string

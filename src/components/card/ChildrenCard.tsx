@@ -5,6 +5,7 @@ type ChildrenCardProps = {
     to?: string
     ariaLabel?: string
     className?: string
+    ariaLabeledby?: string
 
     children: React.ReactNode
 }
@@ -14,7 +15,7 @@ export default function ChildrenCard(props: ChildrenCardProps) {
 
     if(props.to) {
         return (
-            <Link className={className} to={props.to} aria-label={props.ariaLabel}>{props.children}</Link>
+            <Link className={className} to={props.to} aria-label={props.ariaLabel} aria-labelledby={props.ariaLabeledby}>{props.children}</Link>
         )
     }
     return (
