@@ -35,16 +35,16 @@ export default function Index() {
 
             <IndexSection section="categories" ariaLabeledby="categories_title" title="Todas as Categorias">
                 <nav aria-label="Todas as categorias" className="categories_internal">
-                    <Card to="./categories.html?category=Trabalho" ariaLabel="Trabalho" text="Trabalho"/>
-                    <Card to="./categories.html?category=Tecnologia" ariaLabel="Tecnologia" text="Tecnologia"/>
-                    <Card to="./categories.html?category=Produtividade" ariaLabel="Produtividade" text="Produtividade"/>
-                    <Card to="./categories.html?category=Filmes" ariaLabel="Filmes" text="Filmes"/>
-                    <Card to="./categories.html?category=Lifestyle" ariaLabel="Lifestyle" text="Lifestyle"/>
-                    <Card to="./categories.html?category=Educação" ariaLabel="Educação" text="Educação"/>
-                    <Card to="./categories.html?category=Mailing" ariaLabel="Mailing" text="Mailing"/>
-                    <Card to="./categories.html?category=eCommerce" ariaLabel="eCommerce" text="eCommerce"/>
-                    <Card to="./categories.html?category=Alimentação" ariaLabel="Alimentação" text="Alimentação"/>
-                    <Card to="./categories.html?category=Social" ariaLabel="Social" text="Social"/>
+                    <Card to="./categories.html?category=Trabalho" text="Trabalho"/>
+                    <Card to="./categories.html?category=Tecnologia" text="Tecnologia"/>
+                    <Card to="./categories.html?category=Produtividade" text="Produtividade"/>
+                    <Card to="./categories.html?category=Filmes" text="Filmes"/>
+                    <Card to="./categories.html?category=Lifestyle" text="Lifestyle"/>
+                    <Card to="./categories.html?category=Educação" text="Educação"/>
+                    <Card to="./categories.html?category=Mailing" text="Mailing"/>
+                    <Card to="./categories.html?category=eCommerce" text="eCommerce"/>
+                    <Card to="./categories.html?category=Alimentação" text="Alimentação"/>
+                    <Card to="./categories.html?category=Social" text="Social"/>
                 </nav>
             </IndexSection>
 

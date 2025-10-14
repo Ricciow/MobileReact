@@ -32,7 +32,7 @@ export default function Card(props: CardProps) {
     }
 
     if(props.text) {
-        return <ChildrenCard className="category" to={props.to} ariaLabel={props.ariaLabel}>{props.text}</ChildrenCard>;
+        return <ChildrenCard className="category" to={props.to} ariaLabel={props.ariaLabel ? props.ariaLabel : props.text}>{props.text}</ChildrenCard>;
     }
 
     return <div className="card">Esse card não está funcionando corretamente.</div>
