@@ -6,11 +6,12 @@ import imagemLivros from "../assets/livros.png"
 import imagemTecnologia from "../assets/tecnologia.png"
 import imagemDesign from "../assets/design.png"
 import imagemEmpresas from "../assets/empresas.png"
+import IndexSection from "../components/layout/IndexSection";
 
 export default function Index() {
     return (
         <main className="main_index">
-            <section aria-labelledby="introduction_title" className="introduction">
+            <IndexSection section="introduction" ariaLabeledby="introduction_title">
                 <div className="introduction_texts">
                     <h1 id="introduction_title" className="introduction_title">Navegue por tópicos de interesse</h1>
                     <p className="introduction_text">Descubra conteúdos por categorias, posts em destaque e as escolhas do
@@ -21,19 +22,17 @@ export default function Index() {
                     </div>
                 </div>
                 <Card image={imagemIntrodution} alt="Apresentação do site"/>
-            </section>
+            </IndexSection>
 
-            <section aria-labelledby="popular_categories_title" className="popular_categories">
-                <h2 id="popular_categories_title" className="subtitle">Categorias Populares</h2>
+            <IndexSection section="popular_categories" ariaLabeledby="popular_categories_title" title="Categorias Populares">
                 <nav aria-label="Categorias populares" className="popular_categories_list">
                     <Card image={imagemTrabalho} alt="Categoria de trabalho" to="./categories.html?category=Trabalho" ariaLabel="Trabalho" overlay="Trabalho"/>
                     <Card image={imagemLivros} alt="Categoria de livros" to="./categories.html?category=Livros" ariaLabel="Livros" overlay="Livros"/>
                     <Card image={imagemTecnologia} alt="Categoria de tecnologia" to="./categories.html?category=Tecnologia" ariaLabel="Tecnologia" overlay="Tecnologia"/>
                 </nav>
-            </section>
+            </IndexSection>
 
-            <section aria-labelledby="categories" className="categories">
-                <h2 id="categories" className="subtitle">Todas as Categorias</h2>
+            <IndexSection section="categories" ariaLabeledby="categories_title" title="Todas as Categorias">
                 <nav aria-label="Todas as categorias" className="categories_internal">
                     <Card to="./categories.html?category=Trabalho" ariaLabel="Trabalho" text="Trabalho"/>
                     <Card to="./categories.html?category=Tecnologia" ariaLabel="Tecnologia" text="Tecnologia"/>
@@ -46,19 +45,17 @@ export default function Index() {
                     <Card to="./categories.html?category=Alimentação" ariaLabel="Alimentação" text="Alimentação"/>
                     <Card to="./categories.html?category=Social" ariaLabel="Social" text="Social"/>
                 </nav>
-            </section>
+            </IndexSection>
 
             <div className="bottom_area">
-                <section aria-labelledby="destaques" className="top_posts">
-                    <h2 id="destaques" className="subtitle">Postagens em Destaque</h2>
+                <IndexSection section="top_posts" ariaLabeledby="destaques" title="Postagens em Destaque">
                     <nav aria-label="Postagens em destaque" className="top_posts_list">
                         <Card image={imagemDesign} alt="Postagem 1" title="Erros de Design que Todos Devem Evitar" data="31 Jul 2025" duration="3 min" category="Destaque" to="./post.html" id="post_1"/>
                         <Card image={imagemEmpresas} alt="Postagem 1" title="As maiores Empresas por Receita" data="31 Jul 2025" category="Destaque" to="./post.html" id="post_2"/>
                     </nav>
-                </section>
+                </IndexSection>
 
-                <aside aria-labelledby="escolhas" className="editor_picks">
-                    <h2 id="escolhas" className="subtitle">Escolhas do editor</h2>
+                <IndexSection section="editor_picks" ariaLabeledby="escolhas" title="Escolhas do editor" aside>
                     <nav aria-label="Escolhas do editor" className="card">
                         <ul className="editor_picks_list">
                             <li><a href="#">O uso negativo da Internet</a></li>
@@ -67,7 +64,7 @@ export default function Index() {
                             <li><a href="#">O futuro do trabalho remoto</a></li>
                         </ul>
                     </nav>
-                </aside>
+                </IndexSection>
             </div>
         </main>
     );
