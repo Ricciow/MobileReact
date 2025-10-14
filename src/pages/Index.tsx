@@ -7,6 +7,7 @@ import imagemTecnologia from "../assets/tecnologia.png"
 import imagemDesign from "../assets/design.png"
 import imagemEmpresas from "../assets/empresas.png"
 import IndexSection from "../components/layout/IndexSection";
+import Button from "../components/button/button";
 
 export default function Index() {
     return (
@@ -17,8 +18,8 @@ export default function Index() {
                     <p className="introduction_text">Descubra conteúdos por categorias, posts em destaque e as escolhas do
                         editor.</p>
                     <div className="introduction_buttons">
-                        <a href= "./newsletter.html" className="button">Assine a newsletter</a>
-                        <a href="#categories" className="button_inverse">Explorar categorias</a>
+                        <Button to="./newsletter.html">Assine a newsletter</Button>
+                        <Button to="#categories" inversed>Explorar categorias</Button>
                     </div>
                 </div>
                 <Card image={imagemIntrodution} alt="Apresentação do site"/>
