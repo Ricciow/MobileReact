@@ -1,9 +1,9 @@
 import imagemMenu from '../../assets/menu.svg'
 import imagemClose from '../../assets/close.svg'
-import imagemSearch from '../../assets/search.svg'
 import imagemUser from '../../assets/user.png'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import SearchBox from '../searchBox'
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -33,12 +33,7 @@ export default function Header() {
             </nav>
 
             <div className="search_area">
-                <form  action="./busca.html" className="search card" method="GET" role="search" aria-label="Pesquisar no site">
-                    <input type="text" placeholder="Pesquisar..." name="q" className="input search_input" />
-                    <button type="submit" className="search_button" aria-label="Buscar" >
-                        <img src={imagemSearch} alt="buscar" className="search_icon"/>
-                    </button>
-                </form>
+                <SearchBox url="./busca.html"/>
             </div>
 
             <Link to="./login.html" aria-label="Acessar seu perfil" className="profile_link">

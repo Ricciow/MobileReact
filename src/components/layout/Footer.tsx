@@ -6,7 +6,7 @@ import linkedinImage from '../../assets/linkedin.svg'
 
 export default function Footer() {
     return (
-        <footer>
+    <footer>
         <nav className="socials" aria-label="Redes sociais">
             <a href="#" className="social_link" aria-label="Link para o Instagram">
                 <img src={instagramImage} alt="Instagram" className="social_icon"/>
