@@ -1,6 +1,5 @@
 import imagemMenu from '../../assets/menu.svg'
 import imagemClose from '../../assets/close.svg'
-import imagemSearch from '../../assets/search.svg'
 import imagemUser from '../../assets/user.png'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
