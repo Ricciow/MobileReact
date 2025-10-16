@@ -6,6 +6,8 @@ import imagemEmpresas from "../assets/empresas.png"
 import IndexSection from "../components/layout/IndexSection";
 import Button from "../components/button/Button";
 import { categories, popular } from "../constants/categories";
+import UnorderedList from "../components/UnorderedList";
+import { choices } from "../constants/editorsChoices";
 
 export default function Index() {
     return (
@@ -45,12 +47,9 @@ export default function Index() {
 
                 <IndexSection section="editor_picks" ariaLabeledby="escolhas" title="Escolhas do editor" aside>
                     <nav aria-label="Escolhas do editor" className="card">
-                        <ul className="editor_picks_list">
-                            <li><a href="#">O uso negativo da Internet</a></li>
-                            <li><a href="#">Segredo do brainstorm</a></li>
-                            <li><a href="#">Escalar para pequenos negócios</a></li>
-                            <li><a href="#">O futuro do trabalho remoto</a></li>
-                        </ul>
+                        <UnorderedList className="editor_picks_list" >
+                            {choices.map((choice) => <a href={choice.url}>{choice.title}</a>)}
+                        </UnorderedList>
                     </nav>
                 </IndexSection>
             </div>
