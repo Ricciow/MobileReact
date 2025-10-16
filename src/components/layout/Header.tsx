@@ -3,7 +3,7 @@ import imagemClose from '../../assets/close.svg'
 import imagemUser from '../../assets/user.png'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import SearchBox from '../searchBox'
+import SearchBox from '../SearchBox'
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false)

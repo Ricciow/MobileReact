@@ -13,7 +13,7 @@ export default function ImageCard(props: ImageCardProps) {
 
 
     return (
-        <ChildrenCard className={props.overlay ? 'popular_category' : 'introduction_image'} to={props.to} ariaLabel={props.ariaLabel}>
+        <ChildrenCard className={props.overlay ? 'popular_category' : 'introduction_image'} to={props.to} ariaLabel={props.ariaLabel ? props.ariaLabel : props.overlay}>
             <img src={props.src} alt={props.alt}/>
             {props.overlay && <>
                 <div className="popular_category_overlay"></div>
