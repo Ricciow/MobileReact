@@ -9,7 +9,7 @@ type category = {
     image?: string
 }
 
-export const popular = [
+export const popular: category[] = [
     {
         url: "./categories.html?category=Trabalho",
         name: "Trabalho",
@@ -28,9 +28,9 @@ export const popular = [
         alt: "Categoria de tecnologia",
         image: imagemTecnologia
     }
-] as category[]
+]
 
-export const categories = [
+export const categories: category[] = [
     {
         url: "./categories.html?category=Trabalho",
         name: "Trabalho"
@@ -71,4 +71,4 @@ export const categories = [
         url: "./categories.html?category=Social",
         name: "Social"
     }
-] as category[];
+]
