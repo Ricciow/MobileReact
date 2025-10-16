@@ -1,9 +1,6 @@
 import Card from "../components/card/Card";
 
 import imagemIntrodution from "../assets/introduction.png"
-import imagemTrabalho from "../assets/trabalho.png"
-import imagemLivros from "../assets/livros.png"
-import imagemTecnologia from "../assets/tecnologia.png"
 import imagemDesign from "../assets/design.png"
 import imagemEmpresas from "../assets/empresas.png"
 import IndexSection from "../components/layout/IndexSection";
