@@ -7,7 +7,7 @@ import imagemTecnologia from "../assets/tecnologia.png"
 import imagemDesign from "../assets/design.png"
 import imagemEmpresas from "../assets/empresas.png"
 import IndexSection from "../components/layout/IndexSection";
-import Button from "../components/button/button";
+import Button from "../components/button/Button";
 
 export default function Index() {
     return (
