@@ -8,6 +8,7 @@ import imagemDesign from "../assets/design.png"
 import imagemEmpresas from "../assets/empresas.png"
 import IndexSection from "../components/layout/IndexSection";
 import Button from "../components/button/Button";
+import { categories, popular } from "../constants/categories";
 
 export default function Index() {
     return (
@@ -27,24 +28,13 @@ export default function Index() {
 
             <IndexSection section="popular_categories" ariaLabeledby="popular_categories_title" title="Categorias Populares">
                 <nav aria-label="Categorias populares" className="popular_categories_list">
-                    <Card image={imagemTrabalho} alt="Categoria de trabalho" to="./categories.html?category=Trabalho" ariaLabel="Trabalho" overlay="Trabalho"/>
-                    <Card image={imagemLivros} alt="Categoria de livros" to="./categories.html?category=Livros" ariaLabel="Livros" overlay="Livros"/>
-                    <Card image={imagemTecnologia} alt="Categoria de tecnologia" to="./categories.html?category=Tecnologia" ariaLabel="Tecnologia" overlay="Tecnologia"/>
+                    {popular.map((category, index) => <Card key={index} to={category.url} image={category.image} alt={category.alt} overlay={category.name} />)}
                 </nav>
             </IndexSection>
 
             <IndexSection section="categories" ariaLabeledby="categories_title" title="Todas as Categorias">
                 <nav aria-label="Todas as categorias" className="categories_internal">
-                    <Card to="./categories.html?category=Trabalho" text="Trabalho"/>
-                    <Card to="./categories.html?category=Tecnologia" text="Tecnologia"/>
-                    <Card to="./categories.html?category=Produtividade" text="Produtividade"/>
-                    <Card to="./categories.html?category=Filmes" text="Filmes"/>
-                    <Card to="./categories.html?category=Lifestyle" text="Lifestyle"/>
-                    <Card to="./categories.html?category=Educação" text="Educação"/>
-                    <Card to="./categories.html?category=Mailing" text="Mailing"/>
-                    <Card to="./categories.html?category=eCommerce" text="eCommerce"/>
-                    <Card to="./categories.html?category=Alimentação" text="Alimentação"/>
-                    <Card to="./categories.html?category=Social" text="Social"/>
+                    {categories.map((category, index) => <Card key={index} to={category.url} text={category.name} />)}
                 </nav>
             </IndexSection>
 
